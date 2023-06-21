@@ -6,13 +6,18 @@ class Dog extends Animal {
     private string $breed;
     
     public function __construct(string $name, string $breed) {
-        $this->name = $name;
+        parent::__construct($name);
         $this->breed = $breed;
     }
 
     public function bark() {
         echo "bork bork bork";
     }
+
+	public function eat() {
+		parent::eat();
+		echo "Dog is quickly eating and throw up";
+	}
 
 	/**
 	 * @return string
