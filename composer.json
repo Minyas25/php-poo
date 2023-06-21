@@ -1,0 +1,21 @@
+{
+    "name": "administrateur/php-poo",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public"
+    },
+    "authors": [
+        {
+            "name": "Jean Demel",
+            "email": "jean@demel.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "process-timeout": 0
+    }
+}
