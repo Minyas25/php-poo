@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Example;
+use App\Interaces\Displayable;
 
-class Zoo {
+class Zoo implements Displayable {
 
     /**
      * @var Animal[]
@@ -33,6 +34,9 @@ class Zoo {
         }
     }
 
+    public function toHTML(): string {
+        return "<p>A zoo</p>";
+    }
 
 
 }

@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Example;
+use App\Interaces\Displayable;
 
-class Person extends Animal {
+class Person extends Animal implements Displayable {
     private string $lastName;
 
     public function __construct(string $lastName, string $name) {
@@ -29,5 +30,9 @@ class Person extends Animal {
 	public function setLastName(string $lastName): self {
 		$this->lastName = $lastName;
 		return $this;
+	}
+
+	public function toHTML():string {
+		return "<div>{$this->name} {$this->lastName}</div>";
 	}
 }
